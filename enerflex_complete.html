@@ -1,0 +1,1448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enerflex Ltd. - Lean Consulting Opportunities Report</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <style>
+        /* Reset and Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-color: #1e40af;
+            --secondary-color: #0891b2;
+            --accent-color: #f59e0b;
+            --success-color: #10b981;
+            --warning-color: #f59e0b;
+            --danger-color: #ef4444;
+            --text-primary: #1f2937;
+            --text-secondary: #6b7280;
+            --bg-light: #f9fafb;
+            --bg-white: #ffffff;
+            --border-color: #e5e7eb;
+            --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+            --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            line-height: 1.6;
+            color: var(--text-primary);
+            background-color: var(--bg-white);
+        }
+
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Navigation */
+        .navbar {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            color: white;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: var(--shadow-md);
+        }
+
+        .navbar .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-brand {
+            font-size: 1.5rem;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-menu a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: opacity 0.3s;
+        }
+
+        .nav-menu a:hover {
+            opacity: 0.8;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #1e3a8a 0%, #0e7490 100%);
+            color: white;
+            padding: 4rem 0;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .hero-subtitle {
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .hero-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .stat {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 1.5rem;
+            border-radius: 12px;
+            backdrop-filter: blur(10px);
+        }
+
+        .stat-value {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+
+        /* Sections */
+        .section {
+            padding: 4rem 0;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 2rem;
+            text-align: center;
+            color: var(--primary-color);
+        }
+
+        .bg-light {
+            background-color: var(--bg-light);
+        }
+
+        .bg-gradient {
+            background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
+        }
+
+        /* Cards */
+        .card {
+            background: white;
+            border-radius: 12px;
+            padding: 2rem;
+            box-shadow: var(--shadow-md);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .highlight-card {
+            border-left: 4px solid var(--primary-color);
+            background: linear-gradient(135deg, #eff6ff 0%, white 100%);
+        }
+
+        .card h3 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        .card-icon {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        /* Grids */
+        .grid-2 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        /* Challenge Cards */
+        .challenge-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .challenge-card {
+            border-left: 4px solid var(--warning-color);
+        }
+
+        .challenge-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .challenge-header i {
+            font-size: 2rem;
+            color: var(--warning-color);
+        }
+
+        .challenge-list {
+            list-style: none;
+            padding-left: 0;
+            margin-bottom: 1rem;
+        }
+
+        .challenge-list li {
+            padding: 0.5rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .challenge-list li:before {
+            content: "▸";
+            position: absolute;
+            left: 0;
+            color: var(--warning-color);
+        }
+
+        .impact-badge {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-weight: 600;
+            font-size: 0.85rem;
+            margin-top: 1rem;
+        }
+
+        .impact-high {
+            background-color: #fee2e2;
+            color: var(--danger-color);
+        }
+
+        .impact-medium {
+            background-color: #fef3c7;
+            color: var(--warning-color);
+        }
+
+        /* Facility Cards */
+        .facilities-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .facility-card {
+            border-left: 4px solid var(--secondary-color);
+        }
+
+        .featured-facility {
+            border-left: 4px solid var(--accent-color);
+            background: linear-gradient(135deg, #fffbeb 0%, white 100%);
+        }
+
+        .facility-badge {
+            background: var(--secondary-color);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-weight: 600;
+            font-size: 0.85rem;
+            display: inline-block;
+            margin-bottom: 1rem;
+        }
+
+        .featured-facility .facility-badge {
+            background: var(--accent-color);
+        }
+
+        .facility-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .facility-icon {
+            font-size: 2.5rem;
+            color: var(--secondary-color);
+        }
+
+        .featured-facility .facility-icon {
+            color: var(--accent-color);
+        }
+
+        .facility-details {
+            margin-top: 1rem;
+        }
+
+        .detail-row {
+            display: flex;
+            gap: 1rem;
+            padding: 1rem 0;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .detail-row:last-child {
+            border-bottom: none;
+        }
+
+        .detail-row i {
+            color: var(--secondary-color);
+            font-size: 1.2rem;
+            margin-top: 0.2rem;
+        }
+
+        .facility-list {
+            list-style: none;
+            padding-left: 0;
+            margin-top: 0.5rem;
+        }
+
+        .facility-list li {
+            padding: 0.3rem 0;
+            padding-left: 1rem;
+            position: relative;
+        }
+
+        .facility-list li:before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: var(--secondary-color);
+        }
+
+        .facility-highlight {
+            background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+            padding: 1rem;
+            border-radius: 8px;
+            margin-top: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .facility-highlight i {
+            color: var(--accent-color);
+        }
+
+        /* Tech Cards */
+        .tech-card {
+            background: linear-gradient(135deg, #f0f9ff 0%, white 100%);
+            border-left: 4px solid var(--primary-color);
+        }
+
+        .tech-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .tech-item {
+            display: flex;
+            gap: 1rem;
+            padding: 1rem;
+            background: white;
+            border-radius: 8px;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .tech-item i {
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            margin-top: 0.2rem;
+        }
+
+        /* Alerts */
+        .alert-info {
+            background: #dbeafe;
+            border-left: 4px solid var(--primary-color);
+            padding: 1rem 1.5rem;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .alert-info i {
+            color: var(--primary-color);
+            font-size: 1.5rem;
+        }
+
+        .alert-warning {
+            background: #fef3c7;
+            border-left: 4px solid var(--warning-color);
+            padding: 1rem 1.5rem;
+            border-radius: 8px;
+            margin-top: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .alert-warning i {
+            color: var(--warning-color);
+            font-size: 1.5rem;
+        }
+
+        .alert-success {
+            background: #d1fae5;
+            border-left: 4px solid var(--success-color);
+            padding: 1rem 1.5rem;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .alert-success i {
+            color: var(--success-color);
+            font-size: 1.5rem;
+        }
+
+        /* Region Cards */
+        .region-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .region-card h4 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .region-card ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .region-card ul li {
+            padding: 0.5rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .region-card ul li:before {
+            content: "→";
+            position: absolute;
+            left: 0;
+            color: var(--secondary-color);
+        }
+
+        /* Financial Metrics */
+        .metric-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 0.75rem 0;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .metric-row:last-child {
+            border-bottom: none;
+        }
+
+        .financial-metric {
+            text-align: center;
+            padding: 1rem;
+        }
+
+        .metric-value {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--primary-color);
+        }
+
+        .metric-label {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            margin-top: 0.5rem;
+        }
+
+        /* Competitive Analysis */
+        .competitive-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .competitor-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .highlight-danger {
+            background: linear-gradient(135deg, #fef2f2 0%, white 100%);
+            border-left: 4px solid var(--danger-color);
+        }
+
+        .gap-comparison {
+            margin: 1rem 0;
+        }
+
+        .gap-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 0.75rem;
+            margin: 0.5rem 0;
+            background: white;
+            border-radius: 6px;
+        }
+
+        .gap-highlight {
+            background: #fee2e2;
+            font-weight: 600;
+        }
+
+        /* Leadership Cards */
+        .leadership-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .leader-card {
+            border-left: 4px solid var(--primary-color);
+        }
+
+        .leader-header {
+            display: flex;
+            gap: 1rem;
+            align-items: flex-start;
+            margin-bottom: 1rem;
+            padding-bottom: 1rem;
+            border-bottom: 2px solid var(--border-color);
+        }
+
+        .leader-header i {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-top: 0.2rem;
+        }
+
+        .leader-title {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        .leader-insight {
+            background: #eff6ff;
+            padding: 1rem;
+            border-radius: 6px;
+            margin-top: 1rem;
+            font-style: italic;
+        }
+
+        /* Opportunities */
+        .opportunities-section {
+            margin-top: 3rem;
+        }
+
+        .opportunity-tier {
+            font-size: 1.8rem;
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .opportunity-card {
+            border-left: 4px solid var(--success-color);
+        }
+
+        .priority-high {
+            border-left-color: var(--danger-color);
+        }
+
+        .priority-medium {
+            border-left-color: var(--warning-color);
+        }
+
+        .priority-low {
+            border-left-color: var(--success-color);
+        }
+
+        .opportunity-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .opportunity-header i {
+            font-size: 2rem;
+            color: var(--primary-color);
+        }
+
+        .opportunity-roi {
+            background: #ecfdf5;
+            padding: 1rem;
+            border-radius: 6px;
+            margin-top: 1rem;
+            font-weight: 600;
+            color: var(--success-color);
+        }
+
+        /* Impact Grid */
+        .impact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .impact-item {
+            text-align: center;
+            padding: 2rem;
+            background: white;
+            border-radius: 12px;
+            box-shadow: var(--shadow-md);
+        }
+
+        .impact-value {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .impact-label {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .impact-detail {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+
+        /* Roadmap */
+        .roadmap {
+            display: grid;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .roadmap-phase {
+            background: white;
+            border-radius: 12px;
+            padding: 2rem;
+            box-shadow: var(--shadow-md);
+            border-left: 4px solid var(--primary-color);
+        }
+
+        .phase-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .phase-number {
+            width: 50px;
+            height: 50px;
+            background: var(--primary-color);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+
+        .phase-duration {
+            margin-left: auto;
+            background: #e0e7ff;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-weight: 600;
+            color: var(--primary-color);
+        }
+
+        /* Value Proposition */
+        .value-prop-box {
+            background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+            padding: 2rem;
+            border-radius: 12px;
+            margin-top: 1rem;
+        }
+
+        .value-prop-text {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            color: var(--text-primary);
+        }
+
+        /* Escalation Flow */
+        .escalation-flow {
+            display: grid;
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .escalation-step {
+            display: flex;
+            gap: 1.5rem;
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .step-number {
+            width: 40px;
+            height: 40px;
+            background: var(--primary-color);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            flex-shrink: 0;
+        }
+
+        .arrow-down {
+            text-align: center;
+            color: var(--primary-color);
+            font-size: 2rem;
+        }
+
+        /* Objections */
+        .objection-list {
+            display: grid;
+            gap: 1.5rem;
+        }
+
+        .objection-item {
+            background: #f9fafb;
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-left: 4px solid var(--secondary-color);
+        }
+
+        /* Utility Classes */
+        .lead {
+            font-size: 1.2rem;
+            line-height: 1.8;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .text-warning {
+            color: var(--warning-color);
+        }
+
+        .text-success {
+            color: var(--success-color);
+        }
+
+        .text-danger {
+            color: var(--danger-color);
+        }
+
+        .margin-top {
+            margin-top: 2rem;
+        }
+
+        .styled-list {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .styled-list li {
+            padding: 0.5rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .styled-list li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--success-color);
+            font-weight: 700;
+        }
+
+        ol.styled-list li:before {
+            content: counter(list-item) ".";
+            color: var(--primary-color);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .nav-menu {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .grid-2, .grid-3 {
+                grid-template-columns: 1fr;
+            }
+
+            .facilities-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <i class="fas fa-industry"></i>
+                <span>Enerflex Research</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#executive-summary">Summary</a></li>
+                <li><a href="#challenges">Challenges</a></li>
+                <li><a href="#manufacturing">Operations</a></li>
+                <li><a href="#financial">Financial</a></li>
+                <li><a href="#leadership">Leadership</a></li>
+                <li><a href="#opportunities">Opportunities</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Enerflex Ltd.</h1>
+                <p class="hero-subtitle">Deep Research Report: Lean Consulting Opportunities</p>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <div class="stat-value">$2.41B</div>
+                        <div class="stat-label">Annual Revenue (2024)</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-value">$150-200M</div>
+                        <div class="stat-label">Working Capital Opportunity</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-value">20-40%</div>
+                        <div class="stat-label">Efficiency Gap vs Competitors</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Executive Summary -->
+    <section id="executive-summary" class="section bg-light">
+        <div class="container">
+            <h2 class="section-title">Executive Summary</h2>
+            <div class="card highlight-card">
+                <p class="lead">Enerflex Ltd. is a Calgary-based energy infrastructure company with significant opportunities for lean consulting services. The company operates in gas processing, compression, and power generation across North America and internationally, with $2.41 billion in revenue (2024) but faces operational challenges that lean methodologies could address.</p>
+            </div>
+            
+            <div class="grid-3">
+                <div class="card">
+                    <div class="card-icon">
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <h3>Company Profile</h3>
+                    <p>Calgary-headquartered with major operations in Houston, TX, serving global energy markets with gas processing and compression solutions.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Market Position</h3>
+                    <p>$1.3B backlog with 20-25% EBITDA margins, trailing competitors achieving 40-60% margins.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">
+                        <i class="fas fa-bullseye"></i>
+                    </div>
+                    <h3>Lean Opportunity</h3>
+                    <p>Supply chain delays, project overruns, and operational inefficiencies create compelling transformation case.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Key Operational Challenges -->
+    <section id="challenges" class="section">
+        <div class="container">
+            <h2 class="section-title">Key Operational Challenges</h2>
+            
+            <div class="challenge-grid">
+                <div class="card challenge-card">
+                    <div class="challenge-header">
+                        <i class="fas fa-truck-loading"></i>
+                        <h3>Supply Chain Disruptions</h3>
+                    </div>
+                    <ul class="challenge-list">
+                        <li>Multiple quarterly reports cite "supply chain interruptions leading to delays in receiving materials and parts"</li>
+                        <li>Tariff impacts affecting production timelines</li>
+                        <li>Working capital cycle at <strong>105 days</strong> indicating inefficient inventory management</li>
+                        <li>Large working capital fluctuations impacting cash flow</li>
+                    </ul>
+                    <div class="impact-badge impact-high">High Impact Area</div>
+                </div>
+
+                <div class="card challenge-card">
+                    <div class="challenge-header">
+                        <i class="fas fa-project-diagram"></i>
+                        <h3>Project Execution Issues</h3>
+                    </div>
+                    <ul class="challenge-list">
+                        <li><strong>$41 million margin loss</strong> on EH Cryo project in Kurdistan</li>
+                        <li>Force majeure suspension due to security issues and cost overruns</li>
+                        <li>Gross margins vary significantly across segments (15-31%)</li>
+                        <li>Inconsistent operational efficiency across projects</li>
+                    </ul>
+                    <div class="impact-badge impact-high">High Impact Area</div>
+                </div>
+
+                <div class="card challenge-card">
+                    <div class="challenge-header">
+                        <i class="fas fa-chart-pie"></i>
+                        <h3>Margin Compression</h3>
+                    </div>
+                    <ul class="challenge-list">
+                        <li>Current EBITDA margins: 20-25%</li>
+                        <li>Competitors (USAC, Archrock) achieve 40-60% EBITDA margins</li>
+                        <li>Represents <strong>20-40% efficiency gap</strong></li>
+                        <li>Quality control inconsistencies across operations</li>
+                    </ul>
+                    <div class="impact-badge impact-medium">Medium-High Impact</div>
+                </div>
+
+                <div class="card challenge-card">
+                    <div class="challenge-header">
+                        <i class="fas fa-cogs"></i>
+                        <h3>Operational Inefficiency</h3>
+                    </div>
+                    <ul class="challenge-list">
+                        <li>SAP-based lean systems exist but incomplete implementation</li>
+                        <li>Fleet utilization at 95% but maintenance cost optimization needed</li>
+                        <li>Inconsistent standard work across global operations</li>
+                        <li>Process variation impacting deliverables</li>
+                    </ul>
+                    <div class="impact-badge impact-medium">Medium Impact</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Manufacturing and Operational Structure -->
+    <section id="manufacturing" class="section bg-light">
+        <div class="container">
+            <h2 class="section-title">Manufacturing & Operational Structure</h2>
+            
+            <div class="alert-info">
+                <i class="fas fa-info-circle"></i>
+                <p><strong>Total North American Manufacturing Capacity:</strong> 700,000+ square feet across multiple facilities</p>
+            </div>
+
+            <div class="facilities-grid">
+                <!-- Houston Facility - Featured -->
+                <div class="card facility-card featured-facility">
+                    <div class="facility-badge">USA HEAD OFFICE & MANUFACTURING</div>
+                    <div class="facility-header">
+                        <i class="fas fa-industry facility-icon"></i>
+                        <h3>Houston, Texas</h3>
+                    </div>
+                    <div class="facility-details">
+                        <div class="detail-row">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <strong>Manufacturing Campus:</strong><br>
+                                10815 Telge Road, Houston, TX 77095
+                            </div>
+                        </div>
+                        <div class="detail-row">
+                            <i class="fas fa-building"></i>
+                            <div>
+                                <strong>Corporate Office:</strong><br>
+                                711 Louisiana Street, Houston, TX 77002
+                            </div>
+                        </div>
+                        <div class="detail-row">
+                            <i class="fas fa-ruler-combined"></i>
+                            <div>
+                                <strong>Total Facility Size:</strong><br>
+                                Over 400,000 square feet of shop/warehouse space
+                            </div>
+                        </div>
+                        <div class="detail-row">
+                            <i class="fas fa-layer-group"></i>
+                            <div>
+                                <strong>Campus Details:</strong>
+                                <ul class="facility-list">
+                                    <li>315,000 sq. ft. main manufacturing facility</li>
+                                    <li>150,000 sq. ft. fabrication facility for spool piping & pressure vessels</li>
+                                    <li>Part of 40-acre campus expansion</li>
+                                    <li>Multiple buildings including recently added Building J (13,489 sq. ft.)</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="detail-row">
+                            <i class="fas fa-tools"></i>
+                            <div>
+                                <strong>Manufacturing Capabilities:</strong>
+                                <ul class="facility-list">
+                                    <li>Natural gas processing equipment fabrication</li>
+                                    <li>Compression systems manufacturing</li>
+                                    <li>Modular solutions assembly</li>
+                                    <li>Spool piping fabrication</li>
+                                    <li>Pressure vessel fabrication</li>
+                                    <li>Custom engineering and integration</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="facility-highlight">
+                        <i class="fas fa-star"></i>
+                        <span>Primary USA manufacturing hub with global capacity for modular natural gas solutions</span>
+                    </div>
+                </div>
+
+                <!-- Calgary Facility -->
+                <div class="card facility-card">
+                    <div class="facility-badge">CANADIAN HEAD OFFICE</div>
+                    <div class="facility-header">
+                        <i class="fas fa-industry facility-icon"></i>
+                        <h3>Calgary, Alberta</h3>
+                    </div>
+                    <div class="facility-details">
+                        <div class="detail-row">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <strong>Location:</strong><br>
+                                Calgary, Alberta, Canada
+                            </div>
+                        </div>
+                        <div class="detail-row">
+                            <i class="fas fa-ruler-combined"></i>
+                            <div>
+                                <strong>Facility Size:</strong><br>
+                                250,000 square feet, 24-bay manufacturing plant
+                            </div>
+                        </div>
+                        <div class="detail-row">
+                            <i class="fas fa-tools"></i>
+                            <div>
+                                <strong>Capabilities:</strong>
+                                <ul class="facility-list">
+                                    <li>Gas processing equipment</li>
+                                    <li>Compression systems</li>
+                                    <li>Engineering and design</li>
+                                    <li>Corporate headquarters functions</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Broken Arrow Facility -->
+                <div class="card facility-card">
+                    <div class="facility-badge">MANUFACTURING</div>
+                    <div class="facility-header">
+                        <i class="fas fa-industry facility-icon"></i>
+                        <h3>Broken Arrow, Oklahoma</h3>
+                    </div>
+                    <div class="facility-details">
+                        <div class="detail-row">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <strong>Location:</strong><br>
+                                Broken Arrow, Oklahoma, USA
+                            </div>
+                        </div>
+                        <div class="detail-row">
+                            <i class="fas fa-ruler-combined"></i>
+                            <div>
+                                <strong>Facility Size:</strong><br>
+                                315,000 square feet, 44-bay manufacturing facility
+                            </div>
+                        </div>
+                        <div class="detail-row">
+                            <i class="fas fa-tools"></i>
+                            <div>
+                                <strong>Capabilities:</strong>
+                                <ul class="facility-list">
+                                    <li>Large-scale compression equipment</li>
+                                    <li>Gas processing systems</li>
+                                    <li>Custom fabrication</li>
+                                    <li>Regional service support</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Technology Infrastructure -->
+            <div class="card tech-card">
+                <h3><i class="fas fa-microchip"></i> Technology Infrastructure</h3>
+                <div class="tech-grid">
+                    <div class="tech-item">
+                        <i class="fas fa-server"></i>
+                        <div>
+                            <strong>SAP-Based Systems</strong>
+                            <p>Lean manufacturing systems with iMACS control engineering software</p>
+                        </div>
+                    </div>
+                    <div class="tech-item">
+                        <i class="fas fa-certificate"></i>
+                        <div>
+                            <strong>ISO Certifications</strong>
+                            <p>ISO 9001, 14001, 45001 across operations indicating formal quality systems</p>
+                        </div>
+                    </div>
+                    <div class="tech-item">
+                        <i class="fas fa-tools"></i>
+                        <div>
+                            <strong>Engineering Software</strong>
+                            <p>Advanced control systems and process engineering tools</p>
+                        </div>
+                    </div>
+                    <div class="tech-item">
+                        <i class="fas fa-chart-line"></i>
+                        <div>
+                            <strong>Lean Awareness</strong>
+                            <p>Existing lean manufacturing infrastructure but incomplete implementation</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="alert-warning">
+                    <i class="fas fa-exclamation-triangle"></i>
+                    <p><strong>Lean Consulting Opportunity:</strong> Existing SAP lean systems suggest awareness but incomplete implementation presents significant optimization potential</p>
+                </div>
+            </div>
+
+            <!-- Global Operations -->
+            <div class="card margin-top">
+                <h3><i class="fas fa-globe-americas"></i> Global Operations Footprint</h3>
+                <div class="grid-3">
+                    <div class="region-card">
+                        <h4>North America</h4>
+                        <ul>
+                            <li>Houston, TX (USA HQ)</li>
+                            <li>Calgary, AB (Corporate HQ)</li>
+                            <li>Broken Arrow, OK</li>
+                            <li>Multiple service locations</li>
+                        </ul>
+                    </div>
+                    <div class="region-card">
+                        <h4>International Operations</h4>
+                        <ul>
+                            <li>Latin America</li>
+                            <li>Eastern Hemisphere</li>
+                            <li>Middle East</li>
+                            <li>Asia-Pacific</li>
+                        </ul>
+                    </div>
+                    <div class="region-card">
+                        <h4>Service Network</h4>
+                        <ul>
+                            <li>25 gas plants operated worldwide</li>
+                            <li>95% fleet utilization</li>
+                            <li>After-market service support</li>
+                            <li>Regional service centers</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Financial Performance -->
+    <section id="financial" class="section">
+        <div class="container">
+            <h2 class="section-title">Financial Performance & Competitive Position</h2>
+            
+            <div class="grid-2">
+                <div class="card">
+                    <h3><i class="fas fa-dollar-sign"></i> Revenue Mix (2024)</h3>
+                    <div class="metric-row">
+                        <span>Total Revenue:</span>
+                        <strong>$2.41 Billion</strong>
+                    </div>
+                    <div class="metric-row">
+                        <span>Energy Infrastructure:</span>
+                        <strong>67% of gross margin</strong>
+                    </div>
+                    <div class="metric-row">
+                        <span>Engineered Systems Backlog:</span>
+                        <strong>$1.3 Billion</strong>
+                    </div>
+                    <div class="metric-row">
+                        <span>After-Market Services:</span>
+                        <strong>Recurring revenue base</strong>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h3><i class="fas fa-chart-bar"></i> Operational Metrics</h3>
+                    <div class="metric-row">
+                        <span>EBITDA Margins:</span>
+                        <strong>20-25% range</strong>
+                    </div>
+                    <div class="metric-row">
+                        <span>Free Cash Flow (Q4 2024):</span>
+                        <strong>$76 Million</strong>
+                    </div>
+                    <div class="metric-row">
+                        <span>Fleet Utilization:</span>
+                        <strong>95% on compression assets</strong>
+                    </div>
+                    <div class="metric-row">
+                        <span>Working Capital Cycle:</span>
+                        <strong class="text-warning">105 days</strong>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card highlight-card margin-top">
+                <h3><i class="fas fa-balance-scale"></i> Debt Position & Financial Flexibility</h3>
+                <div class="grid-3">
+                    <div class="financial-metric">
+                        <div class="metric-value">$616M</div>
+                        <div class="metric-label">Net Debt</div>
+                    </div>
+                    <div class="financial-metric">
+                        <div class="metric-value">1.5x</div>
+                        <div class="metric-label">Leverage Ratio</div>
+                    </div>
+                    <div class="financial-metric">
+                        <div class="metric-value">1.5-2.0x</div>
+                        <div class="metric-label">Target Range</div>
+                    </div>
+                </div>
+                <p class="text-center margin-top"><strong>Financial flexibility exists for operational investments</strong></p>
+            </div>
+
+            <!-- Competitive Analysis -->
+            <div class="card margin-top">
+                <h3><i class="fas fa-trophy"></i> Competitive Landscape Analysis</h3>
+                <div class="competitive-grid">
+                    <div class="competitor-card">
+                        <h4>Primary Competitors</h4>
+                        <ul>
+                            <li>USAC (USA Compression Partners)</li>
+                            <li>Archrock</li>
+                            <li>TechnipFMC</li>
+                            <li>Superior Energy Services</li>
+                            <li>Forum Energy Technologies</li>
+                            <li>Aker Solutions</li>
+                        </ul>
+                    </div>
+                    <div class="competitor-card highlight-danger">
+                        <h4>Critical Efficiency Gap</h4>
+                        <div class="gap-comparison">
+                            <div class="gap-item">
+                                <span>Enerflex EBITDA:</span>
+                                <strong class="text-warning">20-25%</strong>
+                            </div>
+                            <div class="gap-item">
+                                <span>USAC & Archrock:</span>
+                                <strong class="text-success">40-60%</strong>
+                            </div>
+                            <div class="gap-item gap-highlight">
+                                <span>Performance Gap:</span>
+                                <strong class="text-danger">20-40% Lower</strong>
+                            </div>
+                        </div>
+                        <p class="margin-top"><em>Source: Fitch Ratings - "Enerflex has larger scale in gross revenue but significantly lower EBITDA margins"</em></p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Market Trends -->
+            <div class="card margin-top bg-gradient">
+                <h3><i class="fas fa-chart-line"></i> Industry Trends & Market Position</h3>
+                <div class="grid-2">
+                    <div>
+                        <h4>Market Growth</h4>
+                        <p>Gas compression market expected to reach <strong>$9.5 billion by 2034</strong> with 4.3% CAGR</p>
+                        <p>Increasing demand for operational efficiency and reliability across energy infrastructure</p>
+                    </div>
+                    <div>
+                        <h4>Strategic Positioning</h4>
+                        <p>Company focus on "enhancing profitability of core operations" and achieving "operational efficiencies"</p>
+                        <p>Leadership emphasis on financial performance creates opening for operational excellence consulting</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Leadership Team -->
+    <section id="leadership" class="section bg-light">
+        <div class="container">
+            <h2 class="section-title">Leadership & Decision-Making Structure</h2>
+            
+            <div class="alert-info">
+                <i class="fas fa-lightbulb"></i>
+                <p><strong>Key Insight:</strong> Leadership team has extensive industry and financial experience but appears focused on financial performance rather than operational excellence, creating an opening for lean consulting.</p>
+            </div>
+
+            <div class="leadership-grid">
+                <div class="card leader-card">
+                    <div class="leader-header">
+                        <i class="fas fa-user-tie"></i>
+                        <div>
+                            <h3>Paul Mahoney</h3>
+                            <p class="leader-title">President & Chief Executive Officer</p>
+                        </div>
+                    </div>
+                    <div class="leader-details">
+                        <p><strong>Background:</strong></p>
+                        <ul>
+                            <li>Former ChampionX executive</li>
+                            <li>Chart Industries board director</li>
+                            <li>Extensive energy sector leadership experience</li>
+                            <li>Appointed September 2025</li>
+                        </ul>
+                        <p class="leader-insight"><strong>Engagement Strategy:</strong> Financial performance focus, receptive to ROI-driven operational improvements</p>
+                    </div>
+                </div>
+
+                <div class="card leader-card">
+                    <div class="leader-header">
+                        <i class="fas fa-chart-line"></i>
+                        <div>
+                            <h3>Preet Dhindsa</h3>
+                            <p class="leader-title">Chief Financial Officer</p>
+                        </div>
+                    </div>
+                    <div class="leader-details">
+                        <p><strong>Background:</strong></p>
+                        <ul>
+                            <li>Former ENMAX CFO</li>
+                            <li>Scotiabank executive background</li>
+                            <li>Strong financial and capital markets expertise</li>
+                            <li>Focus on working capital optimization</li>
+                        </ul>
+                        <p class="leader-insight"><strong>Engagement Strategy:</strong> Emphasize working capital reduction ($150-200M opportunity) and margin improvement</p>
+                    </div>
+                </div>
+
+                <div class="card leader-card">
+                    <div class="leader-header">
+                        <i class="fas fa-globe-americas"></i>
+                        <div>
+                            <h3>Greg Stewart</h3>
+                            <p class="leader-title">President - USA Operations</p>
+                        </div>
+                    </div>
+                    <div class="leader-details">
+                        <p><strong>Responsibilities:</strong></p>
+                        <ul>
+                            <li>Houston manufacturing operations oversight</li>
+                            <li>Broken Arrow facility management</li>
+                            <li>USA market strategy and execution</li>
+                            <li>Project delivery and customer relations</li>
+                        </ul>
+                        <p class="leader-insight"><strong>Engagement Strategy:</strong> Focus on supply chain optimization and project execution improvements</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lean Consulting Opportunities -->
+    <section id="opportunities" class="section">
+        <div class="container">
+            <h2 class="section-title">Lean Consulting Opportunities</h2>
+            
+            <div class="card highlight-card">
+                <h3><i class="fas fa-bullseye"></i> Quantifiable Business Impact</h3>
+                <p class="lead">Based on industry benchmarks and operational analysis, lean implementation could deliver:</p>
+                <div class="impact-grid">
+                    <div class="impact-item">
+                        <div class="impact-value">$150-200M</div>
+                        <div class="impact-label">Working Capital Reduction</div>
+                        <p class="impact-detail">15-20% improvement in 105-day cycle</p>
+                    </div>
+                    <div class="impact-item">
+                        <div class="impact-value">200-400 bps</div>
+                        <div class="impact-label">Gross Margin Improvement</div>
+                        <p class="impact-detail">Reduce 15-31% variation across segments</p>
+                    </div>
+                    <div class="impact-item">
+                        <div class="impact-value">20-30%</div>
+                        <div class="impact-label">Project Delivery Time</div>
+                        <p class="impact-detail">Faster time-to-commissioning</p>
+                    </div>
+                    <div class="impact-item">
+                        <div class="impact-value">95%+</div>
+                        <div class="impact-label">Asset Utilization</div>
+                        <p class="impact-detail">Increase beyond current 95%</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Value Proposition -->
+            <div class="card margin-top highlight-card">
+                <h3><i class="fas fa-comments"></i> Your Opening Value Proposition</h3>
+                <div class="value-prop-box">
+                    <p class="value-prop-text">"I noticed Enerflex's competitors are achieving <strong>40-60% EBITDA margins</strong> while you're at 20-25%. With your <strong>$1.3B backlog</strong> and supply chain challenges, lean methodology could unlock <strong>$150-200M in working capital</strong> while improving project delivery times by <strong>20-30%</strong>."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer style="background: #1f2937; color: white; padding: 2rem 0; text-align: center; margin-top: 4rem;">
+        <div class="container">
+            <p>Enerflex Deep Research Report - Lean Consulting Opportunities</p>
+            <p style="margin-top: 0.5rem; opacity: 0.8;">Comprehensive analysis for strategic business development</p>
+        </div>
+    </footer>
+</body>
+</html>
